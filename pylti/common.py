@@ -167,7 +167,7 @@ def _post_patched_request(consumers, lti_key, body,
     client = oauth2.Client(consumer)
 
     if lti_cert:
-        client.add_certificate(key=lti_cert, cert=lti_cert, domain='')
+#        client.add_certificate(key=lti_cert, cert=lti_cert, domain='')
         log.debug("cert %s", lti_cert)
 
     import httplib2
