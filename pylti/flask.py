@@ -83,7 +83,7 @@ class LTI(object):
 
         :raises: LTIException
         """
-        log.debug('verify request=%s', self.lti_kwargs.get('request'))
+        log.debug('verify request=%s, session=%s', self.lti_kwargs.get('request'), str(session))
         if self.lti_kwargs.get('request') == 'session':
             self._verify_session()
         elif self.lti_kwargs.get('request') == 'initial':
